@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "es-CO"
     )}`;
 
-    const url = `https:wa.me/${numeroWhatsApp}?text=${encodeURIComponent(
+    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(
       mensaje
     )}`;
 
