@@ -1,0 +1,758 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-color: #fff5f5; */
+  color: #3e3e3e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff5f5;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.header-left h1 {
+  color: #b78e24;
+  font-size: 65px;
+  max-width: 200px;
+  margin-bottom: 5px;
+}
+
+.header-left p {
+  color: #3e3e3e;
+  font-size: 17px;
+  max-width: 600px;
+}
+
+.btn {
+  display: inline-block;
+  position: relative;
+  background-color: #b78e24; /* Color del botón */
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: background 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #3e3e3e;
+  transition: left 0.4s ease-in-out;
+  z-index: 0;
+}
+.btn:hover::after {
+  left: 0;
+}
+
+.btn span {
+  position: relative;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.header-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-right img {
+  max-width: 300px;
+  height: 300px;
+}
+
+/*  Estilos para la página de gracias*/
+.thankyoupage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #fff5f5;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+.container {
+  max-width: 500px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.logo {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 24px;
+  color: #b78e24;
+}
+p {
+  font-size: 16px;
+  color: #3e3e3e;
+}
+
+/*  */
+
+/* Seccion encuentra */
+
+.encuentra {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.encuentra h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  color: #b78e24;
+  max-width: 50%;
+}
+
+/* Seccion de productos */
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff5f5;
+}
+
+.producto {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.producto:hover {
+  transform: scale(1.05); /* Aumenta el tamaño un poco */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.producto h3 {
+  color: #c6920b;
+  margin: 10px 0;
+}
+
+.producto p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Seccion de promoción */
+
+.producto-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+.products {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* width: 250px; */
+  width: min(100%, 250px);
+  text-align: center;
+}
+.products img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#promocion h1 {
+  text-align: center;
+  color: #b78e24;
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+}
+.products h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #8b6508;
+}
+.precio-anterior {
+  text-decoration: line-through;
+  color: red;
+  font-size: 16px;
+}
+.precio-actual {
+  font-size: 20px;
+  font-weight: bold;
+  color: #3e3e3e;
+}
+
+/* Seccion de carrousel */
+
+#testimonios {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff5f5;
+}
+
+#testimonios h1 {
+  text-align: center;
+  color: #b78e24;
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto; /* Asegura que el carrusel esté centrado */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos internos */
+  justify-content: center;
+  text-align: center;
+}
+
+.carousel-inner {
+  display: flex;
+  overflow: hidden;
+}
+
+.testimonial {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.testimonial.active {
+  display: flex;
+}
+
+.testimonial img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+  /* object-fit: cover; 
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: block; */
+}
+
+.testimonial p {
+  font-size: 16px;
+  font-style: italic;
+  color: #3e3e3e;
+}
+
+.testimonial h4 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #b78e24;
+}
+
+/* Botones de navegación */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  color: #b78e24;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.prev {
+  left: -5px; /* Ajusta la posición */
+}
+
+.next {
+  right: -5px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #8a6d1b;
+}
+
+.indicadores {
+  margin-top: 10px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #3e3e3e;
+}
+
+/* Seccion de preguntas frecuentes */
+.preguntas {
+  background-color: #fff5f5;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.preguntas h2 {
+  text-align: center;
+  color: #b78e24;
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.faq-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+details {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+summary {
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+  padding: 10px;
+}
+
+summary::after {
+  content: "\f078"; /* Icono de FontAwesome */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+details p {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #333;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Seccion para el checkout */
+
+#checkout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #fff5f5;
+}
+
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  width: 100%;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Sección izquierda (productos) */
+.left-section,
+.right-section {
+  padding: 20px;
+  flex: 1;
+}
+
+.left-section {
+  background: #f4f4f4;
+  border-right: 1px solid #ddd;
+}
+
+h2,
+h3 {
+  margin-bottom: 15px;
+  color: #b78e24;
+}
+
+.products label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.products input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.quantity {
+  width: 50px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#total {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #3e3e3e;
+}
+
+/* Sección derecha (formulario) */
+.right-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-section input,
+select {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #218838;
+}
+
+/* Sección de te esperamos */
+
+.esperamos {
+  text-align: center;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border-top: 5px solid #b78e24; */
+}
+
+.esperamos h1 {
+  font-size: 35px;
+  color: #b78e24;
+  margin-bottom: 20px;
+  max-width: 50%;
+  text-align: center;
+}
+
+/*  Seccion de contacto */
+
+.contacto {
+  background-color: #fdeeea; /* Color suave de fondo */
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  max-width: 800px; /* Ajusta el ancho máximo */
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.titulo {
+  text-align: center;
+  color: #b78e24;
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.mensaje {
+  font-size: 1.2rem;
+  color: #3e3e3e;
+  margin-bottom: 20px;
+}
+
+.boton-whatsapp {
+  display: inline-block;
+  background-color: #28a745; /* Verde de WhatsApp */
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.boton-whatsapp:hover {
+  background-color: #218838; /* Un verde más oscuro al pasar el mouse */
+}
+
+.whatsapp-icon {
+  width: 150px; /* Ajusta el tamaño de la imagen */
+  margin-left: 20px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-size: 30px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 85px;
+  right: 25px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #b78e24;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.scroll-to-top:hover {
+  transform: scale(1.1);
+}
+
+/* Pop-up design */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.error-input {
+  border: 2px solid red;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.popup-content {
+  text-align: center;
+}
+
+.popup-content p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+#close-popup {
+  padding: 8px 15px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#close-popup:hover {
+  background: darkred;
+}
+
+footer {
+  background-color: #3e3e3e;
+  text-align: center;
+  padding: 5px;
+  font-size: 16px;
+}
+
+footer p {
+  color: white;
+  text-decoration: none;
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Diseño responsive */
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+  }
+  .header-left,
+  .header-right {
+    width: 100%;
+  }
+  .header-left {
+    margin-bottom: 20px;
+  }
+  .header-left h1 {
+    font-size: 40px;
+  }
+  .header-left p {
+    font-size: 15px;
+  }
+  .btn {
+    margin: 0 auto;
+  }
+  .header-right img {
+    max-width: 200px;
+    height: 200px;
+  }
+  .encuentra h1 {
+    font-size: 30px; /* Reduce tamaño en móviles */
+    max-width: 90%;
+  }
+  .esperamos h1 {
+    font-size: 30px; /* Reduce tamaño en móviles */
+    max-width: 90%;
+  }
+  .contenedor {
+    flex-direction: column; /* Cambia a diseño vertical */
+    text-align: center;
+  }
+
+  .whatsapp-icon {
+    max-width: 60px; /* Reduce el tamaño en móviles */
+  }
+
+  .titulo {
+    font-size: 1.8rem;
+  }
+
+  .mensaje {
+    font-size: 1rem;
+  }
+
+  .boton-whatsapp {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .checkout-container {
+    flex-direction: row;
+  }
+  .left-section {
+    border-right: 1px solid #ddd;
+  }
+}
