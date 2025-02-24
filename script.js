@@ -232,11 +232,11 @@ document.addEventListener("DOMContentLoaded", () => {
       "es-CO"
     )}`;
 
-    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(
+    const url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(
       mensaje
     )}`;
 
-    window.open(url, "_blank"); //Abre WhatsApp en otra pestaña
+    window.location.replace(url); //Abre WhatsApp en otra pestaña
     setTimeout(() => {
       window.location.href = "gracias.html"; // Redirige a la página de agradecimiento después de 2 segundos
     }, 2000);
