@@ -236,9 +236,10 @@ document.addEventListener("DOMContentLoaded", () => {
       mensaje
     )}`;
 
-    window.location.replace(url); //Abre WhatsApp en otra pestaña
+    window.open(url, "_blank"); // Abre WhatsApp en una nueva pestaña
+
     setTimeout(() => {
-      window.location.href = "gracias.html"; // Redirige a la página de agradecimiento después de 2 segundos
+      window.location.href = "gracias.html"; // Redirige a la página de agradecimiento
     }, 2000);
   }
 });
