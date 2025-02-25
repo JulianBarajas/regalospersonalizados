@@ -241,20 +241,20 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = "gracias.html"; // Redirige a la página de agradecimiento después de 2 segundos
     }, 2000);
   }
+});
 
-  function mostrarPopup(mensaje) {
-    const popup = document.createElement("div");
-    popup.classList.add("popup");
-    popup.innerHTML = `
+function mostrarPopup(mensaje) {
+  const popup = document.createElement("div");
+  popup.classList.add("popup");
+  popup.innerHTML = `
        <div class="popup-content">
          <p>${mensaje}</p>
          <button id="close-popup">Cerrar</button>
        </div>
      `;
-    document.body.appendChild(popup);
+  document.body.appendChild(popup);
 
-    document.getElementById("close-popup").addEventListener("click", () => {
-      popup.remove();
-    });
-  }
-});
+  document.getElementById("close-popup").addEventListener("click", () => {
+    popup.remove();
+  });
+}
