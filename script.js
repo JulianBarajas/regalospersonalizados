@@ -236,14 +236,10 @@ document.addEventListener("DOMContentLoaded", () => {
       mensaje
     )}`;
 
-    window.open(url, "_blank"); //Abre WhatsApp en otra pestaña
+    window.location.replace(url); //Abre WhatsApp en otra pestaña
     setTimeout(() => {
       window.location.href = "gracias.html"; // Redirige a la página de agradecimiento después de 2 segundos
     }, 2000);
-    //   window.location.replace(url); //Abre WhatsApp en otra pestaña
-    //   setTimeout(() => {
-    //     window.location.href = "gracias.html"; // Redirige a la página de agradecimiento después de 2 segundos
-    //   }, 2000);
   }
 
   function mostrarPopup(mensaje) {
