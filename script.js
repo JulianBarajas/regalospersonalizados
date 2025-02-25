@@ -237,8 +237,6 @@ document.addEventListener("DOMContentLoaded", () => {
     )}`;
 
     window.open(url, "_blank");
-
-    // Redirigir a la página de agradecimiento después de 2 segundos
     setTimeout(() => {
       window.location.href = "gracias.html";
     }, 2000);
