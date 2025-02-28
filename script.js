@@ -258,3 +258,30 @@ function mostrarPopup(mensaje) {
     popup.remove();
   });
 }
+
+// Transicion de imagen del hero
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector(".header-right img").classList.add("visible");
+});
+
+// Funcion para las otras imagenes
+const images = document.querySelectorAll(".producto img");
+
+// Configurar IntersectionObserver
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible"); // Agregar la clase visible
+        observer.unobserve(entry.target); // Dejar de observar después de animar
+      }
+    });
+  },
+  {
+    threshold: 0.2, // Se activará cuando el 20% de la imagen esté visible
+  }
+);
+
+// Observar cada imagen
+images.forEach((img) => observer.observe(img));
